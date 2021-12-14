@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Have put all the interfaces in one file for brevity.
 namespace BookImport
 {
     public interface IFileDownloader

@@ -13,7 +13,8 @@
             FileDownloader = downloader;
         }
 
-
+        //Book Import is now a collection of actions. The class itself does not need to know
+        //the intricacies of implementation
         public void ImportBooks()
         {
             var fileContent = FileDownloader.DownloadFile();
