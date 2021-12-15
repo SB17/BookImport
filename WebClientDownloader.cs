@@ -7,11 +7,13 @@
 
         public WebClientDownloader(string Url)
         {
-            this.Url = Url;
+            this.Url = Url ?? throw new ArgumentNullException(nameof(Url));
         }
 
         public string DownloadFile()
         {
+            
+            
             var content = String.Empty;
             try
             {

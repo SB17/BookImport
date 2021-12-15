@@ -8,11 +8,12 @@ namespace BookImport
 
         public DatabaseBookSaver(string connectionString)
         {
-            ConnectionString = connectionString;
+            this.ConnectionString = connectionString ?? throw new ArgumentNullException(nameof(connectionString));
         }
 
         public void SaveBooks(IEnumerable<Book> books)
         {
+           
             try
             {
                 using (var conn = new SqlConnection(ConnectionString))
